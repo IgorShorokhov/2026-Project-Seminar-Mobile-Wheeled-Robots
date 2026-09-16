@@ -13,3 +13,7 @@ presentations/**/*.log
 *.blg
 
 .DS_Store
+
+
+
+*.xlsx
