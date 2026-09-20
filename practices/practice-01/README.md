@@ -24,5 +24,5 @@ ros2 launch practice_01_turtlesim draw_number.launch.py
 ```
 ros2 node list
 ros2 topic list
-rqt-graph
+rqt_graph
 ```
