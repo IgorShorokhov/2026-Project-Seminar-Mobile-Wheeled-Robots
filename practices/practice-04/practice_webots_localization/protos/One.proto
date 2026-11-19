@@ -1,0 +1,73 @@
+#VRML_SIM R2025a utf8
+
+PROTO One [
+  field SFVec3f translation 0 0 0
+  field SFColor color 0.5 0.5 0.5
+  field SFString name "one"
+]
+{
+  Solid {
+    translation IS translation
+    name IS name
+
+    children [
+
+      Transform {
+        translation 0 0 0.5
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor IS color
+              roughness 1
+              metalness 0
+            }
+            geometry Box {
+              size 0.1 4 1
+            }
+          }
+        ]
+      }
+
+
+      Transform {
+        translation -0.5 1.5 0.5
+        rotation 0 0 1 -0.785398
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor IS color
+              roughness 1
+              metalness 0
+            }
+            geometry Box {
+              size 0.1 1.414 1
+            }
+          }
+        ]
+      }
+    ]
+
+    boundingObject Group {
+      children [
+        Transform {
+          translation 0 0 0.5
+          children [
+            Box {
+              size 0.1 4 1
+            }
+          ]
+        }
+
+        Transform {
+          translation -0.5 1.5 0.5
+          rotation 0 0 1 -0.785398
+          children [
+            Box {
+              size 0.1 1.414 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
